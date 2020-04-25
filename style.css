@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Bevan', cursive;
+    background-color: black;
+    overflow: hidden;
+    perspective: 300px;
+}
+
+
+.title, .perspective-text p{
+    color: orange;
+    text-transform: uppercase;
+}
+
+
+.title{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 500px;
+    line-height: 420px;
+    overflow: hidden;
+    animation: scale 13s ease-in both;
+    
+}
+
+.perspective-text{
+    width:80vw;
+    position: absolute;
+    top: 140%;
+    left: calc(50% - 40vw);
+    animation: slideIn  100s linear; 
+    animation-delay: 12s;
+}
+
+.perspective-text p{
+   
+    margin: 0 auto;
+    font-size: 40px;  
+    letter-spacing: 8px;
+    word-spacing: 14px;
+    margin-bottom: 100px;
+    font-weight: 900;
+    text-align: center;
+    
+}
+@keyframes slideIn{
+    0%{
+        transform: rotateX(30deg) translateZ(0);
+    }
+    100%{
+        transform: rotateX(40deg) translateZ(-2600px);
+        top:-7000px;
+    }
+}
+
+@keyframes scale {
+    0%{
+    opacity: 0;
+    
+    
+    }
+    19%{
+        opacity: 0;
+        font-size: 500px;  
+        line-height: 420px;
+    }
+    20%{
+        opacity: 100%;
+    }
+    99%{
+        opacity: 100%;
+    }
+    100%{
+        font-size: 30px;
+        opacity: 0;
+        line-height: 28px;
+    }
+}
+
